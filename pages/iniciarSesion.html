@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estiloBarra.css">
+    <link rel="stylesheet" href="../css/estiloUsuarios.css">
+    <link rel="shortcut icon" href="../icon/LC.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script defer src="../js/baseDeDatosUsuarios.js"></script>
+    <script defer src="../js/iniciarSesion.js"></script>
+    <title>Iniciar Sesión</title>
+</head>
+<body>
+    <div class="barraSuperior">
+        <nav>
+            <a href="./crearUsuario.html">Crear Usuario</a>
+            <a href="../index.html">Inicio</a>
+        </nav>
+    </div>
+
+    <h1 class="tituloPrincipal">Iniciar Sesión</h1>
+    <form class="cuerpo" id="formularioIniciarSesion">
+        <h3 class="renglonUno">Correo Electónico</h3>
+        <input type="text" id="correoIngresado" required>
+        <h3 class="otrosRenglones">Contraseña</h3>
+        <input type="password" id="contraseñaIngresada" required>
+        <p id="pieBoton">
+            <input class="boton" type="submit" value="Iniciar sesión">
+        </p>
+        <div>
+            <a href="./recuperarCuenta.html">Olvidé la contraseña</a>
+            <a href="./crearUsuario.html">No tengo una cuenta</a>
+        </div>
+    </form>
+    <h2 class="marcaDePagina">Lo de <span class="carloh">Carloh</span></h2>
+    <p>Botón que no existe. Sólo funcionan si no se cambió el correo ni la contraseña. Contraseñas: admin, admin, ioPoi, Contraseña, elemento, defecto</p>
+    <button type="button" id="cargarUsuarioDefecto1">Cargar usuario pre-CARGADO id:1</button>
+    <button type="button" id="cargarUsuarioDefecto2">Cargar usuario pre-CARGADO id:2</button>
+    <button type="button" id="cargarUsuarioDefecto3">Cargar usuario pre-CARGADO id:3</button>
+    <button type="button" id="cargarUsuarioDefecto4">Cargar usuario pre-CARGADO id:4</button>
+    <button type="button" id="cargarUsuarioDefecto5">Cargar usuario pre-CARGADO id:5</button>
+    <button type="button" id="cargarUsuarioDefecto6">Cargar usuario pre-CARGADO id:6</button>
+    <p>Sólo funciona si se pre-creo un usuario</p>
+    <button type="button" id="cargarUsuarioDefectoCreado">Cargar usuario pre-CREADO</button>
+</body>
+</html>

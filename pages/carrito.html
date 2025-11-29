@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estiloBarra.css">
+    <link rel="stylesheet" href="../css/estiloCarrito.css">
+    <link rel="shortcut icon" href="../icon/LC.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script defer src="../js/carrito.js"></script>
+    <title>Carrito</title>
+</head>
+<body>
+    <div class="barraSuperior">
+        <nav id="barraSuperior">
+            <a href="./iniciarSesion.html" id="sesionActual">Iniciar sesión</a>
+            <a href="../index.html" id="inicio">Inicio</a>
+        </nav>
+    </div>
+
+    <h1 class="tituloPrincipal">Carrito</h1>
+    <div class="cuerpo">
+        <main id="productosCarrito">
+            <!-- lo rellena el js -->
+        </main>
+        
+        <aside class="barraOpciones">
+            <div id="barraOpciones">
+                <h3>Carrito:</h3>
+                <h4 id="numeroDeProductos">No hay productos</h4>
+                <h4 id="precioTotal">Total: $0</h4>
+                <button id="borrarCarrito">Vaciar Carrito</button>
+                <button id="comprarCarrito">Comprar</button>
+            </div>
+        </aside>
+    </div>
+    <h2 id="piePagina" class="marcaDePagina">Lo de <span class="carloh">Carloh</span></h2>
+</body>
+</html>

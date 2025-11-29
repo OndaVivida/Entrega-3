@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estiloBarra.css">
+    <link rel="stylesheet" href="../css/estiloUsuarios.css">
+    <link rel="shortcut icon" href="../icon/LC.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script defer src="../js/baseDeDatosUsuarios.js"></script>
+    <script defer src="../js/crearUsuario.js"></script>
+    <title>Crear Cuenta</title>
+</head>
+<body>
+    <div class="barraSuperior">
+        <nav>
+            <a href="./iniciarSesion.html">Iniciar sesión</a>
+            <a href="../index.html">Inicio</a>
+        </nav>
+    </div>
+
+    <h1 class="tituloPrincipal">Crear Cuenta</h1>
+    <form id="formularioCrearCuenta" class="cuerpo">
+        <h3 class="renglonUno">Nombre</h3>
+        <input type="text" id="crearUsuario" required>
+        <h3 class="otrosRenglones">Correo Electónico</h3>
+        <input type="email" id="crearEmail" required>
+        <h3 class="otrosRenglones">Contraseña</h3>
+        <input type="password" id="crearContraseña" required>
+        <h3 class="otrosRenglones">Repetir Contraseña</h3>
+        <input type="password" id="crearContraseñaRepetida" required>
+        <p id="pieBoton">
+            <input class="boton" type="submit" value="Crear Cuenta">
+        </p>
+        <div>
+            <a href="./iniciarSesion.html">Ya tengo una cuenta</a>
+        </div>
+    </form>
+    <h2 class="marcaDePagina">Lo de <span class="carloh">Carloh</span></h2>
+    <p>Botón que no existe. Sólo funciona si el usuario a crear no existe o fue eliminado. contraseña: 369963</p>
+    <button type="button" id="crearUsuarioDefecto">Crear un usuario Pre-cargado</button>
+</body>
+</html>

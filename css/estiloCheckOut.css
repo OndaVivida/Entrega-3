@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+    background-color: #19381F;
+}
+
+.tituloPrincipal {
+    display: flex;
+	background-color: #19381F;
+	color: #F7B05B;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 20vh;
+    margin: 0;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+button:hover {
+    color: #013601;
+}
+
+.siDepto:hover {
+    color: #013601
+}
+
+.noDepto:hover {
+    color: #a10f0f;
+}
+
+input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.boton {
+    color: #F7B05B;
+    background-color: #19381F;
+    border: auto;
+}
+
+.filaDoble {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.lineaSeparadora {
+    width: 100%;
+    border-top: 2px solid black;
+    margin: 20px 0;
+}
+
+.cuerpo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 99%;
+    margin: auto;
+}
+
+.check {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #000;
+    border-radius: 6px;
+    padding: 40px;
+    background: #93AC98;
+}
+
+.productos {
+    margin-right: 0;
+    padding: 1%;
+    margin: 0;
+    border: 1px solid #000;
+    border-radius: 6px;
+    margin-left: 15px;
+    width: auto;
+    background: #F7B05B8c;
+    transition: 0.2s;
+}
+
+.productosLinea {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.subtotal {
+    font-weight: bold;
+    justify-content: center;
+    margin-left: auto;
+}
+
+#totalCheck {
+    margin-left: auto;
+}
+
+.negrita {
+    font-weight: bold;
+}
+
+.botonDeCompra {
+    /* color: #CD4631; */
+    background-color: #F7B05B;
+    border: 1px solid #000;
+}
+
+.botonDeCompra:hover {
+    background-color: #ad7a3b;
+    color: #fff;
+}
+
+.marcaDePagina {
+    display: flex;
+	background-color: #19381F;
+	color: #F7B05B;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 20vh;
+    margin: 0;
+    font-weight: bold;
+}
+
+.loDe {
+    color: #F7B05B;
+}
+
+.error {
+    color: #a10f0f;
+    font-weight: bold;
+}
+
+.carloh {
+	color: #CD4631;
+}

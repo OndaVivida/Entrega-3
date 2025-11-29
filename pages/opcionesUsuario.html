@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estiloBarra.css">
+    <link rel="stylesheet" href="../css/estiloUsuarios.css">
+    <link rel="stylesheet" href="../css/estiloOpcionesUsuario.css">
+    <link rel="shortcut icon" href="../icon/LC.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script defer src="../js/baseDeDatosUsuarios.js"></script>
+    <script defer src="../js/opcionesUsuario.js"></script>
+    <title>Opciones de Usuario</title>
+</head>
+<body>
+    <div class="barraSuperior">
+        <nav>
+            <a href="../index.html">Inicio</a>
+            <a href="../pages/carrito.html" id="carrito">Carrito</a>
+        </nav>
+    </div>
+
+    <h1 class="tituloPrincipal">Opciones de Usuario</h1>
+    <div class="cuerpoOpcionesUsuario" id="cuerpoUsuario">
+        <div class="filaDoble">
+            <h2>Hola, <span id="nombres">%error%</span></h2>
+            <button class="editar primerBoton" id="editarNombres">Editar</button>
+        </div>
+        <div class="filaDoble">
+            <h3>Apellidos: <span id="apellidos">%error%</span></h3>
+            <button class="editar" id="editarApellidos">Editar</button>
+        </div>
+        <div class="filaDoble">
+            <h3>Contraseña: <span id="contraseña">%error%</span></h3>
+            <button class="editar" id="editarContraseña">Editar</button>
+        </div>
+        <div class="filaDoble">
+            <h3>Correo: <span id="correo">%error%</span></h3>
+            <button class="editar" id="editarCorreo">Editar</button>
+        </div>
+        <div class="filaDoble">
+            <h3>Localidad: <span id="localidad">%error%</span></h3>
+            <button class="editar" id="editarLocalidad">Editar</button>
+        </div>
+        <div class="filaDoble">
+            <h3>Código Postal: <span id="codigoPostal">%error%</span></h3>
+            <button class="editar" id="editarCodigoPostal">Editar</button>
+        </div>
+        <div class="filaDoble">
+            <h3>Calle: <span id="calle">%error%</span></h3>
+            <button class="editar" id="editarCalle">Editar</button>
+        </div class="filaDoble">
+        <div id="departamento" class="filaDoble"> <!-- lo edita el js -->
+            <h3>Número: <span id="numeroCalle">%error%</span>  Departamento: <span id="numeroDepartamento">%error%</span></h3>
+            <button class="editar" id="editarNumero">Editar</button>
+        </div>
+        <div class="botonesFinales">
+            <button id="cerrarSesion">Cerrar sesión</button>
+            <button id="eliminarCuenta">ELIMINAR CUENTA</button>
+        </div>
+    </div>
+    <h2 class="marcaDePagina">Lo de <span class="carloh">Carloh</span></h2>
+</body>
+</html>

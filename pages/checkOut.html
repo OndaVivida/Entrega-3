@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estiloBarra.css">
+    <link rel="stylesheet" href="../css/estiloCheckOut.css">
+    <link rel="shortcut icon" href="../icon/LC.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script defer src="../js/baseDeDatosUsuarios.js"></script>
+    <script defer src="../js/checkOut.js"></script>
+    <title>Compra del Carrito</title>
+</head>
+<body>
+    <div class="barraSuperior">
+        <nav id="barraSuperior">
+            <a href="../index.html">Inicio</a>
+            <a href="../pages/carrito.html">Carrito</a>
+        </nav>
+    </div>
+
+    <h1 class="tituloPrincipal">Checkout</h1>
+
+    <div class="cuerpo">
+        <main id="datosComprador" class="check">
+            <h2>Datos del comprador</h2>
+            <form id="formularioDatosDeVenta">
+                <div class="filaDoble">
+                    <div>
+                        <h3>Nombres</h3>
+                        <input type="text" id="ingresadoNombres" required>
+                    </div>
+                    <div>
+                        <h3>Apellidos</h3>
+                        <input type="text" id="ingresadoApellidos" required>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="otrosRenglones">Correo Electónico</h3>
+                    <input type="email" id="ingresadoEmail" required>
+                </div>
+                <div class="filaDoble">
+                    <div>
+                        <h3>Localidad</h3>
+                        <input type="text" id="ingresadoLocalidad" required>
+                    </div>
+                    <div>
+                        <h3>Código Postal</h3>
+                        <input type="text" id="ingresadoCodigoPostal" required>
+                    </div>
+                </div>
+                <div class="filaDoble">
+                    <div>
+                        <h3>Calle</h3>
+                        <input type="text" id="ingresadoCalle" required>
+                    </div>
+                    <div>
+                        <h3>Numero</h3>
+                        <input type="text" id="ingresadoNumero" required>
+                    </div>
+                </div>
+                <div id="esDepartamento" class="filaDoble">
+                    <div>
+                        <h3>¿Es un Departamento?</h3>
+                        <button type="button" id="ingresadoDepartamento" class="siDepto">Sí, es un Departamento</button>
+                    </div>
+                </div>
+
+                <div class="lineaSeparadora"></div>
+
+                <h2>Datos de Tarjeta</h2>
+                <div>
+                    <h3>Número de Tarjeta</h3>
+                    <input type="number" id="numeroTarjeta" required>
+                </div>
+                <div id="esDepartamento" class="filaDoble">
+                    <div>
+                        <h3>Fecha de Vencimiento</h3>
+                        <input type="month" id="vencimientoTarjeta" required>
+                    </div>
+                    <div>
+                        <h3>Código de Seguridad (CVV)</h3>
+                        <input type="number" id="codigoCVV" required>
+                    </div>
+                </div>
+                <p id="botonDeCompra">
+                    <input class="botonDeCompra" type="submit" value="Comprar">
+                </p>
+            </form>
+        </main>
+        <aside id="productosCheck" class="check">
+            <h2>Resumen de compra</h2>
+            <!-- lo rellena el js -->
+            <h3 id="totalCheck">Total: $0</h3>
+        </aside>
+    </div>
+
+    <h2 id="piePagina" class="marcaDePagina">Lo de <span class="carloh">Carloh</span></h2>
+</body>
+</html>

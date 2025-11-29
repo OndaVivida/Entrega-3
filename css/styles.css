@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    background-color: #0F2714;
+}
+
+button {
+    width: fit-content;
+    padding: 6px;
+}
+
+button:hover {
+    color: #013601;
+}
+
+.carloh{
+	color: #CD4631;
+}
+
+.marcaDePagina {
+    display: flex;
+	color: #F7B05B;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 20vh;
+    margin: 0;
+    font-weight: bold;
+}
+
+.tituloPrincipal {
+    display: flex;
+	background-color: #19381F;
+	color: #F7B05B;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 50vh;
+    margin: 0;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.cuerpo {
+    display: flex;
+}
+
+.barraDeFiltros {
+    position: sticky;
+    top: 0;
+    width: 220px;
+    height: fit-content;
+    background: #93AC98;
+    color: #000;
+    padding: 20px;
+    border: 1px solid #000;
+    border-bottom: 2px solid #000;
+    border-right: 2px solid #000;
+    border-bottom-right-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    h3{
+        margin-left: 0px;
+        margin-bottom: 5px;
+        margin-top: 20px;
+    }
+    h4{
+        margin-left: 10px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    select{
+        margin-left: 10px;
+        margin-bottom: 10px;
+        width: calc(100% - 30px);
+    }
+    #filtroListaPrecio{
+        margin-left: 10px;
+        margin-bottom: 10px;
+        width: calc(100% - 40px);
+    }
+}
+
+.producto {
+    border: 1px solid #000;
+    border-radius: 6px;
+    padding: 20px;
+    width: 65vw;
+    background: #93AC98;
+    transition: 0.2s;
+}
+
+.precio {
+    margin: 10px;
+    font-weight: bold;
+    font-size: 1.3em;
+    color: black;
+}
+
+.vacio {
+    display: flex;
+    flex-direction: column;
+	background-color: #0F2714;
+	color: #F7B05B;
+    padding: 40px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.negrita {
+    font-weight: bold;
+}

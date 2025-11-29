@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estiloBarra.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="shortcut icon" href="./icon/LC.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script defer src="./js/baseDeDatosUsuarios.js"></script>
+    <script defer src="./js/main.js"></script>
+    <title>Lo de Carloh</title>
+</head>
+<body>
+    <h1 class="tituloPrincipal">La Casa de los tornillos de <span class="carloh">Carloh</span></h1> <!-- alt 255-->
+
+    <div class="barraSuperior">
+        <nav id="barraSuperior">
+            <a href="./pages/iniciarSesion.html" id="sesionActual">Iniciar sesión</a>
+            <a href="./pages/carrito.html" id="botonCompra">Carrito</a>
+        </nav>
+    </div>
+
+    <div class="cuerpo">
+        <aside class="barraDeFiltros">
+            <div>
+                <h3>Ordenar por:</h3>
+                <select id="ordenarLista">
+                    <option value="">Ninguno</option>
+                    <option value="ordenarPorMayorPrecio">Mayor precio</option>
+                    <option value="ordenarPorMenorPrecio">Menor precio</option>
+                    <option value="ordenarPorMayorCantidad">Mayor cantidad por caja</option>
+                    <option value="ordenarPorMenorCantidad">Menor cantidad por caja</option>
+                    <option value="ordenarPorTipoAZ">Tipo de tornillos a-z</option>
+                    <option value="ordenarPorTipoZA">Tipo de tornillos z-a</option>
+                </select>
+            </div>
+            <div>
+                <h3>Filtrar:</h3>
+                <h4>Límite de precio</h4>
+                <input id="filtroListaPrecio" type="text" placeholder="cualquiera">
+                <h4>Tipo</h4>
+                <select id="filtroListaTipo">
+                    <option value="">Todos</option>
+                    <option value="madera">Madera</option>
+                    <option value="chapa">Chapa</option>
+                    <option value="drywall">Drywall</option>
+                    <option value="electronica">Electrónica</option>
+                    <option value="exterior">Exterior</option>
+                    <option value="construccion">Construcción</option>
+                </select>
+            </div>
+            <div>
+                <a href="./pages/test.html">test</a> <!-- BORRAR!!!!!!! -->
+            </div>
+        </aside>
+
+        <section class="productos" id="productos">
+            <h2 class="vacio">Cargando productos...</h2>
+            <!-- lo rellena el js -->
+        </section>
+    </div>
+    <h2 id="piePagina" class="marcaDePagina">Lo de <span class="carloh">Carloh</span></h2>
+</body>
+</html>

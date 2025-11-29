@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    background-color: #0F2714;
+}
+
+.cuerpo {
+    display: flex;
+}
+
+.tituloPrincipal {
+    display: flex;
+	background-color: #19381F;
+	color: #F7B05B;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 20vh;
+    margin: 0;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.barraOpciones {
+    display: flex;
+    position: sticky;
+    top: 45px;
+    right: 0;
+    width: 220px;
+    height: fit-content;
+    background: #93AC98;
+    color: #000;
+    padding: 20px;
+    border: 1px solid #000;
+    border-bottom: 2px solid #000;
+    border-left: 2px solid #000;
+    border-bottom-left-radius: 12px;
+    flex-direction: column;
+    align-items: left;
+    margin-left: auto;
+}
+
+.boton, button {
+    width: fit-content;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+a.boton{
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.boton:hover, a.boton:hover, button:hover {
+    color: #013601;
+}
+
+.productos{
+    margin-right: 0;
+    padding: 20px;
+    margin: 0;
+    border: 1px solid #000;
+    border-radius: 6px;
+    margin-left: 15px;
+    width: 65vw;
+    background: #93AC98;
+    transition: 0.2s;
+}
+
+.vacio {
+    display: flex;
+    flex-direction: column;
+	background-color: #0F2714;
+	color: #F7B05B;
+    padding: 50px;
+    width: 100%;
+    margin-left: center;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.descripcionProducto{
+    display: flex;
+    flex-direction: column;
+}
+
+p{
+    margin: 0;
+}
+
+.precioCarrito {
+    margin: 0;
+    display: flex;
+    right: 0;
+    justify-content: right;
+    align-items: right;
+    font-weight: bold;
+}
+
+.negrita{
+    font-weight: bold;
+}
+
+.carloh{
+	color: #CD4631;
+}
+
+.marcaDePagina {
+    display: flex;
+	background-color: #0F2714;
+	color: #F7B05B;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}

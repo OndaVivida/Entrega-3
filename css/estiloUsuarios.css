@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    background-color: #19381F;
+}
+
+.tituloPrincipal {
+    display: flex;
+	background-color: #19381F;
+	color: #F7B05B;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 20vh;
+    margin: 0;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.cuerpo {
+    height: fit-content;
+    width: 25%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #000;
+    border-radius: 6px;
+    padding: 40px;
+    background: #93AC98;
+    transition: 0.2s;
+}
+
+form input {
+  width: 80%;
+}
+
+.renglonUno {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.otrosRenglones {
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.boton, button {
+    width: fit-content;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+a.boton{
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.boton:hover, a.boton:hover, button:hover {
+    color: #013601;
+}
+
+#eliminarCuenta{
+    width: fit-content;
+    color: #a10f0f;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+#eliminarCuenta:hover{
+    width: fit-content;
+    color: #fff;
+    background-color: #a10f0f;
+    text-decoration: underline;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+
+.marcaDePagina {
+    display: flex;
+	background-color: #19381F;
+	color: #F7B05B;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 20vh;
+    margin: 0;
+    font-weight: bold;
+}
+
+.error {
+    color: #a10f0f;
+    font-weight: bold;
+}
+
+.carloh {
+	color: #CD4631;
+}

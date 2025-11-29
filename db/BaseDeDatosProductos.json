@@ -1,0 +1,226 @@
+[
+    {
+        "id": 1,
+        "titulo": "Tornillo para Madera 4x30mm",
+        "tipo": "madera",
+        "descripcion": "Tornillo fosfatado para madera de rosca honda y punta afilada.",
+        "cantidad": 50,
+        "precio": 4.5
+    },
+    {
+        "id": 2,
+        "titulo": "Tornillo para Madera 5x50mm",
+        "tipo": "madera",
+        "descripcion": "Tornillo zincado de alta resistencia para uniones de madera gruesa.",
+        "cantidad": 50,
+        "precio": 7.2
+    },
+    {
+        "id": 3,
+        "titulo": "Autoperforante para Chapa 4.2x19mm",
+        "tipo": "chapa",
+        "descripcion": "Tornillo de punta en broca para chapa, no requiere perforación previa.",
+        "cantidad": 25,
+        "precio": 6
+    },
+    {
+        "id": 4,
+        "titulo": "Drywall 3.5x25mm Cabeza Trompeta",
+        "tipo": "drywall",
+        "descripcion": "Fosfatado negro para fijar placas de yeso a los perfiles.",
+        "cantidad": 100,
+        "precio": 3.8
+    },
+    {
+        "id": 5,
+        "titulo": "Máquina Métrico M6x30",
+        "tipo": "chapa",
+        "descripcion": "Tornillo para metal roscado o tuerca, cabeza Phillips.",
+        "cantidad": 30,
+        "precio": 1.5
+    },
+    {
+        "id": 6,
+        "titulo": "Máquina Métrico M8x40 Acero 8.8",
+        "tipo": "construcción",
+        "descripcion": "Alta resistencia para aplicaciones estructurales.",
+        "cantidad": 30,
+        "precio": 3
+    },
+    {
+        "id": 7,
+        "titulo": "Tirafondo 8x60mm Cabeza Hexagonal",
+        "tipo": "madera",
+        "descripcion": "Para madera estructural.",
+        "cantidad": 60,
+        "precio": 9.5
+    },
+    {
+        "id": 8,
+        "titulo": "Allen M5x25 Cabeza Cilíndrica",
+        "tipo": "electrónica",
+        "descripcion": "Ideal para electrónica.",
+        "cantidad": 20,
+        "precio": 2.8
+    },
+    {
+        "id": 9,
+        "titulo": "Torx para Madera 4x50mm",
+        "tipo": "madera",
+        "descripcion": "Cabeza Torx para alto torque sin desgaste.",
+        "cantidad": 20,
+        "precio": 6.5
+    },
+    {
+        "id": 10,
+        "titulo": "Inoxidable M6x40 A2",
+        "tipo": "exterior",
+        "descripcion": "Acero inoxidable para exteriores o ambientes húmedos.",
+        "cantidad": 20,
+        "precio": 9
+    },
+    {
+        "id": 11,
+        "titulo": "Bulón Hexagonal M10x60 + Tuerca",
+        "tipo": "construcción",
+        "descripcion": "Conjunto para anclajes pesados.",
+        "cantidad": 10,
+        "precio": 15
+    },
+    {
+        "id": 12,
+        "titulo": "Cabeza Redonda 3x12mm Electrónica",
+        "tipo": "electrónica",
+        "descripcion": "Tornillo pequeño para placas y anclajes electrónicos.",
+        "cantidad": 25,
+        "precio": 2
+    },
+    {
+        "id": 13,
+        "titulo": "Tornillo para Madera 3.5x20mm",
+        "tipo": "madera",
+        "descripcion": "Ideal para fijaciones pequeñas en muebles y terminaciones.",
+        "cantidad": 40,
+        "precio": 3.2
+    },
+    {
+        "id": 14,
+        "titulo": "Autoperforante con Arandela 4.8x25mm",
+        "tipo": "chapa",
+        "descripcion": "Para chapas y techos, incluye arandela de sellado.",
+        "cantidad": 30,
+        "precio": 7.5
+    },
+    {
+        "id": 15,
+        "titulo": "Drywall 3.5x35mm para Madera",
+        "tipo": "drywall",
+        "descripcion": "Para colocar placas de yeso en estructura de madera.",
+        "cantidad": 100,
+        "precio": 4.2
+    },
+    {
+        "id": 16,
+        "titulo": "Máquina Métrico M4x16 Cabeza Phillips",
+        "tipo": "chapa",
+        "descripcion": "Tornillo pequeño para gabinetes y soportes metálicos.",
+        "cantidad": 20,
+        "precio": 1.4
+    },
+    {
+        "id": 17,
+        "titulo": "Allen M8x50 Acero 12.9",
+        "tipo": "construcción",
+        "descripcion": "Alta resistencia industrial para maquinaria pesada.",
+        "cantidad": 25,
+        "precio": 5.8
+    },
+    {
+        "id": 18,
+        "titulo": "Inoxidable M5x20 Cabeza Avellanada",
+        "tipo": "exterior",
+        "descripcion": "Para terminaciones prolijas en exteriores húmedos.",
+        "cantidad": 25,
+        "precio": 6.5
+    },
+    {
+        "id": 19,
+        "titulo": "Tornillo para Madera 6mm",
+        "tipo": "madera",
+        "descripcion": "Tornillo de acero fosfatado para madera, cabeza pozidrive.",
+        "cantidad": 50,
+        "precio": 8.5
+    },
+    {
+        "id": 20,
+        "titulo": "Tornillo para Chapa 3/4\"",
+        "tipo": "chapa",
+        "descripcion": "Rosca autorroscante, punta mecha para perforación directa.",
+        "cantidad": 20,
+        "precio": 9.2
+    },
+    {
+        "id": 21,
+        "titulo": "Métrico M5x20",
+        "tipo": "construcción",
+        "descripcion": "Rosca estándar métrica, uso general, cabeza allen.",
+        "cantidad": 25,
+        "precio": 11
+    },
+    {
+        "id": 22,
+        "titulo": "Parker Nº8",
+        "tipo": "chapa",
+        "descripcion": "Tornillo parker para chapa, cabeza philips, zincado.",
+        "cantidad": 150,
+        "precio": 7.6
+    },
+    {
+        "id": 23,
+        "titulo": "Autoperforante 1\"",
+        "tipo": "chapa",
+        "descripcion": "Punta mecha, ideal para fijar chapa a estructura metálica.",
+        "cantidad": 200,
+        "precio": 21.8
+    },
+    {
+        "id": 24,
+        "titulo": "Tornillo de Banco 1/4\" x 3\"",
+        "tipo": "construcción",
+        "descripcion": "Tornillo largo para fijaciones estructurales, alta resistencia.",
+        "cantidad": 60,
+        "precio": 14.5
+    },
+    {
+        "id": 25,
+        "titulo": "Tornillo Inoxidable M4x16",
+        "tipo": "exterior",
+        "descripcion": "Acero inoxidable A2, resistente a la corrosión, cabeza philips.",
+        "cantidad": 20,
+        "precio": 19.5
+    },
+    {
+        "id": 26,
+        "titulo": "Tornillo Inoxidable 5mm",
+        "tipo": "exterior",
+        "descripcion": "Rosca profunda, acero inoxidable, cabeza philips.",
+        "cantidad": 100,
+        "precio": 22.5
+    },
+    {
+        "id": 27,
+        "titulo": "Drywall 6x1\" en Punta",
+        "tipo": "drywall",
+        "descripcion": "Tornillo negro fosfatado para placas de yeso, punta fina, cabeza philips.",
+        "cantidad": 100,
+        "precio": 4.8
+    },
+    {
+        "id": 28,
+        "titulo": "Drywall 6x1 1/4\" para Perfilería",
+        "tipo": "drywall",
+        "descripcion": "Tornillo fosfatado para montaje de perfiles y placas, alta penetración.",
+        "cantidad": 300,
+        "precio": 13.4
+    }
+]
