@@ -89,7 +89,7 @@ if (usuarioActivo.id) {
         }
     }).showToast();
 }
-
+// si tiene cuenta y espacios vacíos los guarda
 guardarInformacion = () => {
     let dbUsuarioActivo = (JSON.parse(localStorage.getItem("Base de Datos de Usuarios Insegura"))).find((usuario) => usuario.id == usuarioActivo.id)
     let baseDeDatosDeUsuarios = JSON.parse(localStorage.getItem("Base de Datos de Usuarios Insegura"))
@@ -143,7 +143,7 @@ formularioDatosDeVenta.onsubmit = (desactivarFormulario) => {
         sessionStorage.setItem("Mensaje", "Gracias por su compra")
         Swal.fire({
             title: "Compra realizada",
-            background: "#0F2714",
+            background: "#05232c",
             color: "#93AC98",
             confirmButtonColor: "#F7B05B",
             html: `

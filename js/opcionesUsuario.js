@@ -25,6 +25,11 @@ editarGuardarDatos = (dato, direccion) => {
     direccion = direccion.split(".")
     if (direccion[1]) {
         usuarioActivoCompleto[direccion[0]][direccion[1]] = dato
+        if (direccion[1] == "nombres") {
+            let usuarioActivoModificar = JSON.parse(localStorage.getItem("Usuario Activo"))
+            usuarioActivoModificar.nombre = dato.indexOf(" ") == -1 ? dato : dato.slice(0, dato.indexOf(" ")),
+            localStorage.setItem("Usuario Activo", JSON.stringify(usuarioActivoModificar))
+        }
     } else {
         usuarioActivoCompleto[direccion[0]] = dato
     }
@@ -175,15 +180,20 @@ document.getElementById("editarContraseña").onclick = () => {
 }})}})}
 // Número
 editarNumero = () => {
-    const numeroCalle = document.getElementById("numeroCalle").innerText
-    let numeroDepartamento = document.getElementById("numeroDepartamento").innerText || false
-    if (!numeroDepartamento) {
+    let numeroCalle = document.getElementById("numeroCalle").innerText
+    let numeroDepartamento
+    if (numeroCalle == "Sin Asignar") {
+        numeroCalle = ""
+    }
+    try {
+        numeroDepartamento = document.getElementById("numeroDepartamento").innerText
+    } catch {
         numeroDepartamento = ""
     }
     Swal.fire({
         title: "Cambiar Número y/o Departamento",
         html:`<h3>Ingrese el número de la casa</h3>
-            <input type="text" id="numeroCalleCambiado" class="swal2-input" value="${numeroCalle}">
+            <input type="text" id="numeroCalleCambiado" class="swal2-input" value="${numeroCalle}" placeholder="Sin Asignar">
             <h3>Ingrese el número de departamento</h3>
             <input type="text" id="numeroDepartamentoCambiado" class="swal2-input" value="${numeroDepartamento}" placeholder="Ninguno">
             <p>Para borrar déjelo en blanco</p>`,
@@ -194,7 +204,7 @@ editarNumero = () => {
         preConfirm: () => {
             const numeroDepartamentoCambiado = document.getElementById("numeroDepartamentoCambiado").value
             const numeroCalleCambiado = document.getElementById("numeroCalleCambiado").value
-            return [numeroDepartamentoCambiado, numeroCalleCambiado]
+            return [numeroCalleCambiado, numeroDepartamentoCambiado]
         }
     }).then((numeros) => {
         if (numeros.isConfirmed) {
