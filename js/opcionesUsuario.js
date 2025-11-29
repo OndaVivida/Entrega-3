@@ -258,7 +258,7 @@ document.getElementById("eliminarCuenta").onclick = () => {
             Swal.fire({
                 title: "Borrar cuenta",
                 text: "Para borrar la cuenta ingrese su contraseña",
-                input: "text",
+                input: "password",
                 showCancelButton: true,
                 confirmButtonText: "BORRAR CUENTA",
                 cancelButtonText: "Cancelar",
