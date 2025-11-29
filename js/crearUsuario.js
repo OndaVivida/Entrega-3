@@ -49,7 +49,7 @@ document.getElementById("formularioCrearCuenta").onsubmit = (desactivarFormulari
         break
     }
 }
-
+//Parte que sería eliminada
 //Botón de pre-crear
 document.getElementById("crearUsuarioDefecto").onclick = () => {
     document.getElementById("crearUsuario").value = "María Jesús"

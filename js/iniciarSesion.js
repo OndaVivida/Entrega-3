@@ -49,7 +49,7 @@ document.getElementById("formularioIniciarSesion").onsubmit = (desactivarFormula
         }).showToast();
     }
 }
-
+//Parte que sería eliminada
 //Botón de pre-creado
 document.getElementById("cargarUsuarioDefectoCreado").onclick = () => {
     document.getElementById("correoIngresado").value = "PreCarga@yahoo.com"

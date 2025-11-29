@@ -1,0 +1,4 @@
+sé que le conviene tener fotos de los tornillos pero no tengo ni idea de tornillos y me iba a llevar más tiempo eso que el resto de la página
+pero sería agregarle un: foto: "URL"; a cada objeto en el BaseDeDatosProductos.json
+
+igual le agregué un logo a la página, no se si compensa jaja

@@ -50,7 +50,7 @@ existeElCorreo = (recuperado) => {
         let disclaimer = document.createElement("div")
         disclaimer.setAttribute("class", "cuerpo")
         disclaimer.setAttribute("id", "recuperado")
-        disclaimer.innerHTML = `<p>no sé como hacer eso del correo así que acá estaría una idea de lo que se enviaría:</p>
+        disclaimer.innerHTML = `<p>la idea sería mandar un correo así que acá estaría una idea de lo que se enviaría:</p>
                                 <p>Se ha realizado una recuperación de la contraseña de una cuenta de "La Casa de los tornillos de Carloh" vinculada a este correo, estos son los datos:</p>
                                 <p>Nombre: ${recuperado.nombre.nombres}</p>
                                 <p>Contraseña: ${recuperado.contraseña}</p>`

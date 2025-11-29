@@ -2,7 +2,8 @@ Santiago Alcorta
 
 Simulador de ecommerce de una empresa de tornillos.
 los botones que dicen "Botón que no existe" son botones dejados para autocompletar que no estarían realmente.
-para autocompletar la encuesta de venta se requiere una cuenta. <-- IMPORTANTE
+Para autocompletar la encuesta de venta se requiere una cuenta, <-- IMPORTANTE
+eso sí sería parte de la página real
 
 en iniciar sesion hay 2 botones:
 los botones Cargar usuario pre-CARGADO id:n° logea un usuario con todos los datos.
@@ -14,6 +15,6 @@ intenté que sea un .json para probar cosas pero hasta donde entendí no se pued
 los productos si están en un .json
 
 
-sé que nos dieron una guía de que no agregemos cosas que no aportan al funcionamiento de la página
-lo que pasó es que este proyecto lo fui haciendo a medida de las clases con los contenidos nuevos y se me transformó en una especie de base para probar cosas y ver cómo funcionan
-..y también me da lástima borrar todo
+Sé que nos dieron una guía de que no agregemos cosas que no aportan al funcionamiento de la página,
+lo que pasó es que este proyecto lo fui haciendo a medida de las clases con los contenidos nuevos y se me transformó en una especie de base para probar cosas y ver cómo funcionan sin arrancar desde cero todo el rato
+...y también me da lástima borrar todo :')
