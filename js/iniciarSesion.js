@@ -66,15 +66,15 @@ document.getElementById("cargarUsuarioDefecto2").onclick = () => {
 }
 document.getElementById("cargarUsuarioDefecto3").onclick = () => {
     document.getElementById("correoIngresado").value = "testDe@departamento.com"
-    document.getElementById("contraseñaIngresada").value = "ioPoi" //<-- distingue mayúsculas
+    document.getElementById("contraseñaIngresada").value = "ioPoi"
 }
 document.getElementById("cargarUsuarioDefecto4").onclick = () => {
     document.getElementById("correoIngresado").value = "encanta@que.la"
-    document.getElementById("contraseñaIngresada").value = "Contraseña" //<-- distingue mayúsculas
+    document.getElementById("contraseñaIngresada").value = "Contraseña"
 }
 document.getElementById("cargarUsuarioDefecto5").onclick = () => {
     document.getElementById("correoIngresado").value = "quinto@usuario.com"
-    document.getElementById("contraseñaIngresada").value = "elemento"
+    document.getElementById("contraseñaIngresada").value = "Bl0r3ft"
 }
 document.getElementById("cargarUsuarioDefecto6").onclick = () => {
     document.getElementById("correoIngresado").value = "correoDe@Prueba.com"

@@ -27,7 +27,7 @@ if (!localStorage.getItem("Base de Datos de Usuarios Insegura")) {
         new CreadorUsuarios("Carloh", "carloh@lodecarloh.com", "admin", "ceo", "B800", "Bahía blanca", "Ángel Brunel", false, 1),
         new CreadorUsuarios("Arnold", "testDe@departamento.com", "ioPoi", "Schwarzenegger", "T-800", "Estanislao del Campo", "Salvatierra", true, 1234, 7),
         new CreadorUsuarios("me", "encanta@que.la", "Contraseña", "este", "guardada", "en", "Texto Plano", true, 99, 3),
-        new CreadorUsuarios("dos nombres", "quinto@usuario.com", "elemento", "dos apellidos", "uiop", "Antartida", "por ahí", false, 456),
+        new CreadorUsuarios("Ander Edinson", "anedison@airemradgem.net", "Bl0r3ft", "Joma Oney", "BP-12", "Bloreft", "Av. Florales", false, 693),
         new CreadorUsuarios("Juan", "correoDe@Prueba.com", "defecto", "Alvarez", "cpostal", "Bolivar", "San Martín", true, 357, 9)
     ]
     localStorage.setItem("Base de Datos de Usuarios Insegura", JSON.stringify(baseDeDatosDeUsuarios))
