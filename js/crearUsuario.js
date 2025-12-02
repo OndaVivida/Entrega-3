@@ -1,7 +1,7 @@
 let dbUsuarios = JSON.parse(localStorage.getItem("Base de Datos de Usuarios Insegura"))
 
 if (localStorage.getItem("Usuario Activo")){
-    sessionStorage.setItem("Mensaje", "Ya tiene una sesion activa")
+    sessionStorage.setItem("Mensaje", "Ya tiene una sesión activa")
     location.href="../index.html"
 }
 
@@ -44,7 +44,7 @@ document.getElementById("formularioCrearCuenta").onsubmit = (desactivarFormulari
             }
             localStorage.setItem("Base de Datos de Usuarios Insegura", JSON.stringify(dbUsuarios))
             localStorage.setItem("Usuario Activo", JSON.stringify(usuarioActual))
-            sessionStorage.setItem("Mensaje", "Cuenta creada correctamente, se ha iniciado sesion de forma automática")
+            sessionStorage.setItem("Mensaje", "Cuenta creada correctamente, se ha iniciado sesión de forma automática")
             location.href="../index.html"
         break
     }

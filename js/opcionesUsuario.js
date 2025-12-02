@@ -225,7 +225,7 @@ editarNumero = () => {
                     editarGuardarDatos(numeros.value[1], "direccion.numeroDepartamento")
                     break
                 default:
-                    console.error("ERROR EN SWITCH ", numeros.value)
+                    console.error("ERROR EN SWITCH; Datos: ", numeros.value, " NO Reconocidos")
             }
         }
     })
@@ -270,29 +270,21 @@ document.getElementById("eliminarCuenta").onclick = () => {
                         return "Contraseña incorrecta"
 }}})}})}
 
-// Botón cerrar sesion
+// Botón cerrar sesión
 document.getElementById("cerrarSesion").onclick = () => {
     Swal.fire({
-        title: "¿Cerrar sesion?",
+        title: "¿Cerrar sesión?",
         icon: "question",
-        showDenyButton: true,
         showCancelButton: true,
-        confirmButtonText: "Cerrar sesion",
-        denyButtonText: "Solo ir a Inicio",
+        confirmButtonText: "Cerrar sesión",
         cancelButtonText: "Cancelar",
         confirmButtonColor: "#700101",
-        denyButtonColor: "#013601",
     }).then((respuesta) => {
         if (respuesta.isConfirmed) {
             localStorage.removeItem("Usuario Activo")
-            sessionStorage.setItem("Mensaje", "Sesion Cerrada")
-            location.href="./iniciarSesion.html"
-        }
-        if (respuesta.isDenied) {
+            sessionStorage.setItem("Mensaje", "Sesión Cerrada")
             location.href="../index.html"
-        }
-    })
-}
+}})}
 // Botón volver a inicio
 document.getElementById("volverInicio").onclick = () => {
     location.href="../index.html"

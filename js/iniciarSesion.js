@@ -31,7 +31,7 @@ document.getElementById("formularioIniciarSesion").onsubmit = (desactivarFormula
                 id: pruebaInicioSesion.id,
             }
             localStorage.setItem("Usuario Activo", JSON.stringify(usuarioActivo))
-            sessionStorage.setItem("Mensaje", "Sesion iniciada correctamente")
+            sessionStorage.setItem("Mensaje", "Se ha iniciado sesión correctamente")
             location.href="../index.html"
         }else{
             throw new Error("")

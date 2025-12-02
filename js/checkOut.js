@@ -77,7 +77,7 @@ if (usuarioActivo.id) {
     }
 }else{
     Toastify({
-        text: "Inicie sesion para pre-cargar los datos, no es obligatorio tener cuenta para comprar",
+        text: "Inicie sesión para pre-cargar los datos, no es obligatorio tener cuenta para comprar",
         duration: 4000,
         position: "center",
         onClick: () => {

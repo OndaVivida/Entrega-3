@@ -5,7 +5,7 @@ los botones que dicen "Botón que no existe" son botones dejados para autocomple
 Para autocompletar la encuesta de venta se requiere una cuenta, <-- IMPORTANTE
 eso sí sería parte de la página real
 
-en iniciar sesion hay 2 botones:
+en iniciar sesión hay 2 botones:
 los botones Cargar usuario pre-CARGADO id:n° logea un usuario con todos los datos.
 el botón Cargar usuario pre-CREADO funciona solo si se usó el botón de crear cuenta, este usuario es creado en el momento simulando los datos básicos del logeo por lo cual está "incompleto".
 
