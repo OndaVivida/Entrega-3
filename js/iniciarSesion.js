@@ -26,7 +26,7 @@ document.getElementById("formularioIniciarSesion").onsubmit = (desactivarFormula
     try {
         if (pruebaInicioSesion.contraseña == contraseñaIngresada){
             let usuarioActivo = {
-                // si tiene 2 nombres muestra sólo el primero
+                // Si tiene 2 nombres muestra sólo el primero
                 nombre: pruebaInicioSesion.nombre.nombres.indexOf(" ") == -1 ? pruebaInicioSesion.nombre.nombres : pruebaInicioSesion.nombre.nombres.slice(0, pruebaInicioSesion.nombre.nombres.indexOf(" ")),
                 id: pruebaInicioSesion.id,
             }

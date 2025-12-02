@@ -34,7 +34,7 @@ notificacionesDeCarga = () => {
     }).showToast();
 }
 
-//El botón del departamento
+// El botón del departamento
 ingresadoDepartamento.onclick = () => {
     if (!document.getElementById("textoExiste")) {
         let opcionesDepto = document.createElement("div")
@@ -89,7 +89,7 @@ if (usuarioActivo.id) {
         }
     }).showToast();
 }
-// si tiene cuenta y espacios vacíos los guarda
+// Si tiene cuenta y espacios vacíos los guarda
 guardarInformacion = () => {
     let dbUsuarioActivo = (JSON.parse(localStorage.getItem("Base de Datos de Usuarios Insegura"))).find((usuario) => usuario.id == usuarioActivo.id)
     let baseDeDatosDeUsuarios = JSON.parse(localStorage.getItem("Base de Datos de Usuarios Insegura"))
@@ -102,8 +102,8 @@ guardarInformacion = () => {
     dbUsuarioActivo.direccion.codigoPostal = document.getElementById("ingresadoCodigoPostal").value
     dbUsuarioActivo.direccion.calle = document.getElementById("ingresadoCalle").value
     dbUsuarioActivo.direccion.alturaCalle = document.getElementById("ingresadoNumero").value
-    if (document.getElementById("ingresadoDepartamento").value) {
-        dbUsuarioActivo.direccion.tipoDepartamento = document.getElementById("ingresadoDepartamento").value
+    if (document.getElementById("ingresadoDepartamento").innerText == "No, es una Casa") {
+        dbUsuarioActivo.direccion.tipoDepartamento = true
         dbUsuarioActivo.direccion.numeroDepartamento = document.getElementById("ingresadoDepartamentoNumero").value
     }
     baseDeDatosDeUsuarios.push(dbUsuarioActivo)
@@ -122,18 +122,14 @@ guardarInformacion = () => {
 
 formularioDatosDeVenta.onsubmit = (desactivarFormulario) => {
     desactivarFormulario.preventDefault()
-    // no compruebo la longitud de la tarjeta para no joder tanto
-    // Comprobación de vencimiento de la tarjeta
+    // NO compruebo la longitud de la tarjeta para no joder tanto al rellenar el formulario
     let vencimiento = document.getElementById("vencimientoTarjeta").value
-    const diaActual = new Date();
-    const añoActual = diaActual.getFullYear()
-    const mesActual = diaActual.getMonth() + 1
-    const fechaActual = añoActual + "-" + mesActual
-    // Comprobacion de la lonjitud del cvv
+    const diaActual = new Date()
+    const fechaActual = diaActual.getFullYear() + "-" + (diaActual.getMonth() + 1)
     let codigoCVV = document.getElementById("codigoCVV").value
-    if (vencimiento < fechaActual) {
+    if (vencimiento < fechaActual) { // Comprobación de vencimiento de la tarjeta
         Swal.fire("La Tarjeta está vencida", "", "error")
-    } else if (String(codigoCVV).length != 3) {
+    } else if (String(codigoCVV).length != 3) { // Comprobacion de la longitud del CVV
         Swal.fire("El código CVV es erroneo", "", "error")
     } else {
         if (informacionIncompleta) {
@@ -157,7 +153,6 @@ formularioDatosDeVenta.onsubmit = (desactivarFormulario) => {
         })
     }
 }
-
 //renderizador
 function productosCheck(datosARenderizar) {
     let ubicacion = document.getElementById("productosCheck")

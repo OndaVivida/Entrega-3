@@ -251,7 +251,6 @@ document.getElementById("eliminarCuenta").onclick = () => {
         confirmButtonText: "Borrar",
         cancelButtonText: "Cancelar",
         confirmButtonColor: "#d33",
-        reverseButtons: true,
         })
     .then((respuesta) => {
         if (respuesta.isConfirmed) {
@@ -273,9 +272,30 @@ document.getElementById("eliminarCuenta").onclick = () => {
 
 // Botón cerrar sesion
 document.getElementById("cerrarSesion").onclick = () => {
-    localStorage.removeItem("Usuario Activo")
-    sessionStorage.setItem("Mensaje", "Sesion Cerrada")
-    location.href="./iniciarSesion.html"
+    Swal.fire({
+        title: "¿Cerrar sesion?",
+        icon: "question",
+        showDenyButton: true,
+        showCancelButton: true,
+        confirmButtonText: "Cerrar sesion",
+        denyButtonText: "Solo ir a Inicio",
+        cancelButtonText: "Cancelar",
+        confirmButtonColor: "#700101",
+        denyButtonColor: "#013601",
+    }).then((respuesta) => {
+        if (respuesta.isConfirmed) {
+            localStorage.removeItem("Usuario Activo")
+            sessionStorage.setItem("Mensaje", "Sesion Cerrada")
+            location.href="./iniciarSesion.html"
+        }
+        if (respuesta.isDenied) {
+            location.href="../index.html"
+        }
+    })
+}
+// Botón volver a inicio
+document.getElementById("volverInicio").onclick = () => {
+    location.href="../index.html"
 }
 
 // Renderizador de datos

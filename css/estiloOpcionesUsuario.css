@@ -53,9 +53,16 @@ h3 {
     margin-top: 50%;
 }
 
-.botonesFinales{
-    margin-top: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.filaDobleBotones {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    gap: 5px;
+    margin-top: 15px;
+    border-bottom: 2px dotted #000;
+}
+
+.botoneEliminar{
+    margin-top: 20px;
+    margin-left: auto;
 }
