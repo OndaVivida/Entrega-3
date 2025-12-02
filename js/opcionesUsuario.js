@@ -273,17 +273,17 @@ document.getElementById("eliminarCuenta").onclick = () => {
 // Botón cerrar sesión
 document.getElementById("cerrarSesion").onclick = () => {
     Swal.fire({
-        title: "¿Cerrar sesión?",
+        title: "¿Cerrar Sesión?",
         icon: "question",
         showCancelButton: true,
-        confirmButtonText: "Cerrar sesión",
+        confirmButtonText: "Cerrar Sesión",
         cancelButtonText: "Cancelar",
         confirmButtonColor: "#700101",
     }).then((respuesta) => {
         if (respuesta.isConfirmed) {
             localStorage.removeItem("Usuario Activo")
             sessionStorage.setItem("Mensaje", "Sesión Cerrada")
-            location.href="../index.html"
+            location.href="./iniciarSesion.html"
 }})}
 // Botón volver a inicio
 document.getElementById("volverInicio").onclick = () => {
