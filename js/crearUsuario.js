@@ -54,6 +54,6 @@ document.getElementById("formularioCrearCuenta").onsubmit = (desactivarFormulari
 document.getElementById("crearUsuarioDefecto").onclick = () => {
     document.getElementById("crearUsuario").value = "María Jesús"
     document.getElementById("crearEmail").value = "PreCarga@yahoo.com"
-    document.getElementById("crearContraseña").value = "369963"
-    document.getElementById("crearContraseñaRepetida").value = "369963"
+    document.getElementById("crearContraseña").value = "1234"
+    document.getElementById("crearContraseñaRepetida").value = "1234"
 }

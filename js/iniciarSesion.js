@@ -65,16 +65,16 @@ document.getElementById("cargarUsuarioDefecto2").onclick = () => {
     document.getElementById("contraseñaIngresada").value = "admin"
 }
 document.getElementById("cargarUsuarioDefecto3").onclick = () => {
-    document.getElementById("correoIngresado").value = "testDe@departamento.com"
-    document.getElementById("contraseñaIngresada").value = "ioPoi"
+    document.getElementById("correoIngresado").value = "genesis@skynet.com"
+    document.getElementById("contraseñaIngresada").value = "123456789"
 }
 document.getElementById("cargarUsuarioDefecto4").onclick = () => {
     document.getElementById("correoIngresado").value = "encanta@que.la"
     document.getElementById("contraseñaIngresada").value = "Contraseña"
 }
 document.getElementById("cargarUsuarioDefecto5").onclick = () => {
-    document.getElementById("correoIngresado").value = "anedison@airemradgem.net"
-    document.getElementById("contraseñaIngresada").value = "Bl0r3ft"
+    document.getElementById("correoIngresado").value = "anedison@correo.net"
+    document.getElementById("contraseñaIngresada").value = "C0ntr4s3ñ4"
 }
 document.getElementById("cargarUsuarioDefecto6").onclick = () => {
     document.getElementById("correoIngresado").value = "correoDe@Prueba.com"
