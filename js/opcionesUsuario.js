@@ -111,7 +111,7 @@ document.getElementById("editarCorreo").onclick = () => {
         cancelButtonText: "Cancelar",
         confirmButtonColor: "#013601",
         inputValidator: (correoIngresado) => {
-            if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correoIngresado)) { //En stackoverflow hay un choclo gigantesco de caracteres, creo que esto debería de ser suficiente. no entiendo claramente que es cada cosa
+            if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correoIngresado)) { //En stackoverflow hay un choclo gigantesco de caracteres pero creo que esto debería de ser suficiente.
                 if (baseDeDatosDeUsuarios.find(usuario => usuario.correo == correoIngresado)) {
                     return "El nuevo Correo ya está en uso"
                 }
@@ -193,14 +193,23 @@ editarNumero = () => {
     Swal.fire({
         title: "Cambiar Número y/o Departamento",
         html:`<h3>Ingrese el número de la casa</h3>
-            <input type="text" id="numeroCalleCambiado" class="swal2-input" value="${numeroCalle}" placeholder="Sin Asignar">
+            <div style="display: flex; width: fit-content; margin-top: 10px; margin-bottom: 20px;">
+                <input type="text" id="numeroCalleCambiado" class="swal2-input" style="margin-top: 0px; margin-right: 5px;" value="${numeroCalle}" placeholder="Sin Asignar">
+                <button id="borrarNumeroCalle" class="swal2-deny swal2-styled" style="width: fit-content;height: fit-content; --swal2-deny-button-background-color: #700101; --swal2-action-button-focus-box-shadow: 0 0 0 3px rgba(112, 1, 1, 0.5);">Borrar</button> 
+            </div>
             <h3>Ingrese el número de departamento</h3>
-            <input type="text" id="numeroDepartamentoCambiado" class="swal2-input" value="${numeroDepartamento}" placeholder="Ninguno">
-            <p>Para borrar déjelo en blanco</p>`,
+            <div style="display: flex; width: fit-content; margin-top: 10px; margin-bottom: 20px;">
+                <input type="text" id="numeroDepartamentoCambiado" class="swal2-input" style="margin-top: 0px; margin-right: 5px;" value="${numeroDepartamento}" placeholder="Ninguno">
+                <button id="borrarNumeroDepartamento" class="swal2-deny swal2-styled" style="width: fit-content; height: fit-content; --swal2-deny-button-background-color: #700101; --swal2-action-button-focus-box-shadow: 0 0 0 3px rgba(112, 1, 1, 0.5);">Borrar</button>
+            </div>`, // Todo ese choclo para que se vea como los otros botones
         showCancelButton: true,
         confirmButtonText: "Confirmar",
         cancelButtonText: "Cancelar",
         confirmButtonColor: "#013601",
+        willOpen: () => {
+            document.getElementById("borrarNumeroCalle").onclick = () => document.getElementById("numeroCalleCambiado").value = ""
+            document.getElementById("borrarNumeroDepartamento").onclick = () => document.getElementById("numeroDepartamentoCambiado").value = ""
+        },
         preConfirm: () => {
             const numeroDepartamentoCambiado = document.getElementById("numeroDepartamentoCambiado").value
             const numeroCalleCambiado = document.getElementById("numeroCalleCambiado").value
@@ -226,10 +235,7 @@ editarNumero = () => {
                     break
                 default:
                     console.error("ERROR EN SWITCH; Datos: ", numeros.value, " NO Reconocidos")
-            }
-        }
-    })
-}
+}}})}
 activarBotonEditarCalle = () => document.getElementById("editarNumero").onclick = () => editarNumero()
 
 // Funcion eliminar cuenta, duh
