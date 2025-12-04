@@ -42,6 +42,6 @@ async function recuperarProductosDelCarrito(completo) {
             return datosProcesados
         })
     .catch((err)=> {
-        return err
+        throw new Error(err)
     })
 }
