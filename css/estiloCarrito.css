@@ -77,12 +77,15 @@ a.boton{
     flex-direction: column;
 	background-color: #0F2714;
 	color: #F7B05B;
-    padding: 50px;
+    padding: auto;
     width: 100%;
-    margin-left: center;
-    justify-content: center;
+    text-align: center;
     align-items: center;
     font-weight: bold;
+}
+
+.centrar {
+    padding-left: 50%;
 }
 
 .descripcionProducto{

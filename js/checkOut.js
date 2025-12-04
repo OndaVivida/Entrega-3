@@ -3,11 +3,6 @@ let usuarioActivo = JSON.parse(localStorage.getItem("Usuario Activo")) || ""
 const formularioDatosDeVenta = document.getElementById("formularioDatosDeVenta")
 let informacionIncompleta = false
 
-if (!sessionStorage.getItem("Resumen")) {
-    sessionStorage.setItem("Mensaje", "Se ha cancelado la venta")
-    location.href="./carrito.html"
-}
-
 notificacionesDeCarga = () => {
     Toastify({
         text: "Datos cargados desde el usuario",
@@ -33,7 +28,6 @@ notificacionesDeCarga = () => {
         }
     }).showToast();
 }
-
 // El botón del departamento
 ingresadoDepartamento.onclick = () => {
     if (!document.getElementById("textoExiste")) {
@@ -51,50 +45,51 @@ ingresadoDepartamento.onclick = () => {
     }
 }
 // Carga de datos de usuario
-if (usuarioActivo.id) {
-    const dbUsuarioActivo = (JSON.parse(localStorage.getItem("Base de Datos de Usuarios Insegura"))).find((usuario) => usuario.id == usuarioActivo.id)
-    let comprobadorVacio = []
-    comprobadorVacio.push(document.getElementById("ingresadoNombres").value = dbUsuarioActivo.nombre.nombres || "")
-    comprobadorVacio.push(document.getElementById("ingresadoApellidos").value = dbUsuarioActivo.nombre.apellidos || "")
-    comprobadorVacio.push(document.getElementById("ingresadoEmail").value = dbUsuarioActivo.correo || "")
-    comprobadorVacio.push(document.getElementById("ingresadoLocalidad").value = dbUsuarioActivo.direccion.localidad || "")
-    comprobadorVacio.push(document.getElementById("ingresadoCodigoPostal").value = dbUsuarioActivo.direccion.codigoPostal || "")
-    comprobadorVacio.push(document.getElementById("ingresadoCalle").value = dbUsuarioActivo.direccion.calle || "")
-    comprobadorVacio.push(document.getElementById("ingresadoNumero").value = dbUsuarioActivo.direccion.alturaCalle || "")
-    if (dbUsuarioActivo.direccion.tipoDepartamento) {
-        ingresadoDepartamento.onclick()
-        comprobadorVacio.push(document.getElementById("ingresadoDepartamentoNumero").value = dbUsuarioActivo.direccion.numeroDepartamento)
-    }
-    if (comprobadorVacio.some((objeto) => objeto == "")) {
-        Swal.fire({
-            title: "Parece ser que los datos están incompletos",
-            text: "No te preocupes, los guardaremos automáticamente cuando finalices la compra, excepto la tarjeta",
-            icon: "info",
-        })
-        informacionIncompleta = true
-    }else{
-        notificacionesDeCarga()
-    }
-}else{
-    Toastify({
-        text: "Inicie sesión para pre-cargar los datos, no es obligatorio tener cuenta para comprar",
-        duration: 4000,
-        position: "center",
-        onClick: () => {
-            location.href="./iniciarSesion.html"
-        },
-        style: {
-            color: "#000",
-            background: "#dd7d65",
+cargarDatosDeUsuario = () => {
+    if (usuarioActivo.id) {
+        const dbUsuarioActivo = (JSON.parse(localStorage.getItem("Base de Datos de Usuarios Insegura"))).find((usuario) => usuario.id == usuarioActivo.id)
+        let comprobadorVacio = []
+        comprobadorVacio.push(document.getElementById("ingresadoNombres").value = dbUsuarioActivo.nombre.nombres || "")
+        comprobadorVacio.push(document.getElementById("ingresadoApellidos").value = dbUsuarioActivo.nombre.apellidos || "")
+        comprobadorVacio.push(document.getElementById("ingresadoEmail").value = dbUsuarioActivo.correo || "")
+        comprobadorVacio.push(document.getElementById("ingresadoLocalidad").value = dbUsuarioActivo.direccion.localidad || "")
+        comprobadorVacio.push(document.getElementById("ingresadoCodigoPostal").value = dbUsuarioActivo.direccion.codigoPostal || "")
+        comprobadorVacio.push(document.getElementById("ingresadoCalle").value = dbUsuarioActivo.direccion.calle || "")
+        comprobadorVacio.push(document.getElementById("ingresadoNumero").value = dbUsuarioActivo.direccion.alturaCalle || "")
+        if (dbUsuarioActivo.direccion.tipoDepartamento) {
+            ingresadoDepartamento.onclick()
+            comprobadorVacio.push(document.getElementById("ingresadoDepartamentoNumero").value = dbUsuarioActivo.direccion.numeroDepartamento)
         }
-    }).showToast();
+        if (comprobadorVacio.some((objeto) => objeto == "")) {
+            Swal.fire({
+                title: "Parece ser que los datos del usuario están incompletos",
+                text: "No te preocupes, los guardaremos automáticamente cuando finalices la compra, excepto la tarjeta",
+                icon: "info",
+            })
+            informacionIncompleta = true
+        }else{
+            notificacionesDeCarga()
+        }
+    }else{
+        Toastify({
+            text: "Inicie sesión para pre-cargar los datos, no es obligatorio tener cuenta para comprar",
+            duration: 4000,
+            position: "center",
+            onClick: () => {
+                location.href="./iniciarSesion.html"
+            },
+            style: {
+                color: "#000",
+                background: "#dd7d65",
+            }
+        }).showToast();
+    }
 }
 // Si tiene cuenta y espacios vacíos los guarda
 guardarInformacion = () => {
     let dbUsuarioActivo = (JSON.parse(localStorage.getItem("Base de Datos de Usuarios Insegura"))).find((usuario) => usuario.id == usuarioActivo.id)
     let baseDeDatosDeUsuarios = JSON.parse(localStorage.getItem("Base de Datos de Usuarios Insegura"))
     baseDeDatosDeUsuarios = baseDeDatosDeUsuarios.filter(usuario => usuario.id != usuarioActivo.id)
-
     dbUsuarioActivo.nombre.nombres = document.getElementById("ingresadoNombres").value
     dbUsuarioActivo.nombre.apellidos = document.getElementById("ingresadoApellidos").value
     dbUsuarioActivo.correo = document.getElementById("ingresadoEmail").value
@@ -136,6 +131,7 @@ formularioDatosDeVenta.onsubmit = (desactivarFormulario) => {
             guardarInformacion()
         }
         formularioDatosDeVenta.reset()
+        localStorage.setItem("carrito", "[]")
         sessionStorage.setItem("Mensaje", "Gracias por su compra")
         Swal.fire({
             title: "Compra realizada",
@@ -148,25 +144,41 @@ formularioDatosDeVenta.onsubmit = (desactivarFormulario) => {
                 `,
             icon: "success",
         }).then(() => {
-            localStorage.setItem("carrito", "[]")
             location.href="../index.html"
         })
     }
 }
-//renderizador
+// Renderizador
+async function cargarResumenDeVenta() {
+    try {
+        productosCheck(await recuperarProductosDelCarrito(false))
+        cargarDatosDeUsuario()
+    } catch(err) {
+        console.error("Se produjo un error durante la carga de datos desde el servidor: ", err)
+        const mensajeError = document.getElementById("cuerpo")
+        mensajeError.removeAttribute("class")
+        mensajeError.innerHTML = `<h2 class="vacio">Se produjo un error al conectar con el servidor.<br>Vuelva a intentarlo mas tarde.</h2>`
+    }
+}
+
 function productosCheck(datosARenderizar) {
     let ubicacion = document.getElementById("productosCheck")
     let tope = document.getElementById("totalCheck")
     let precioTotal = 0
-    datosARenderizar.forEach(producto => {
-        precioTotal = (Math.round((producto.precio * producto.duplicado + precioTotal)* 10)/10)
-        let render = document.createElement("div")
-        render.setAttribute("class", "productos")
-        render.innerHTML = `<h3>${producto.titulo}</h3>
-                            <p class="productosLinea"><span class="negrita">${producto.duplicado}</span> caja/s x <span class="negrita">$${producto.precio}</span> c/u <span class="subtotal">subtotal: $${Math.round(producto.precio * producto.duplicado * 10)/10}</span></p>`
-        ubicacion.insertBefore(render, tope)
-    })
-    document.getElementById("totalCheck").innerText = `TOTAL: $${precioTotal}`
+    ubicacion.removeChild(document.getElementById("cargando"))
+    if (datosARenderizar.length) {
+        datosARenderizar.forEach(producto => {
+            precioTotal = (Math.round((producto.precio * producto.duplicado + precioTotal)* 10)/10)
+            let render = document.createElement("div")
+            render.setAttribute("class", "productos")
+            render.innerHTML = `<h3>${producto.titulo}</h3>
+                                <p class="productosLinea"><span class="negrita">${producto.duplicado}</span> caja/s x <span class="negrita">$${producto.precio}</span> c/u <span class="subtotal">subtotal: $${Math.round(producto.precio * producto.duplicado * 10)/10}</span></p>`
+            ubicacion.insertBefore(render, tope)
+        })
+        document.getElementById("totalCheck").innerText = `TOTAL: $${precioTotal}`
+    }else{
+        sessionStorage.setItem("Mensaje", "La compra ya fue realizada")
+        location.href="../index.html"
+    }
 }
-productosCheck(JSON.parse(sessionStorage.getItem("Resumen")))
-sessionStorage.removeItem("Resumen")
+cargarResumenDeVenta()

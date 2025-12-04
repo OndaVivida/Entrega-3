@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script defer src="../js/recuperarProductosCarrito.js"></script>
     <script defer src="../js/baseDeDatosUsuarios.js"></script>
     <script defer src="../js/checkOut.js"></script>
     <title>Compra del Carrito</title>
@@ -23,7 +24,7 @@
 
     <h1 class="tituloPrincipal">Checkout</h1>
 
-    <div class="cuerpo">
+    <div id="cuerpo" class="cuerpo">
         <main id="datosComprador" class="check">
             <h2>Datos del comprador</h2>
             <form id="formularioDatosDeVenta">
@@ -92,8 +93,9 @@
         </main>
         <aside id="productosCheck" class="check">
             <h2>Resumen de compra</h2>
+            <h2 id="cargando" class="cargando">Cargando Resumen de Compra...</h2>
             <!-- lo rellena el js -->
-            <h3 id="totalCheck">Total: $0</h3>
+            <h3 id="totalCheck">TOTAL: $0</h3>
         </aside>
     </div>
 

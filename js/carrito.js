@@ -1,29 +1,8 @@
 let mensaje = sessionStorage.getItem("Mensaje")
-let datosProcesadosSimplificados = []
-let baseDeDatos
-
-cargarContenido = () => {
-    const URL = "../db/BaseDeDatosProductos.json"
-    fetch (URL)
-        .then(response => response.json())
-        .then(data => baseDeDatos = data)
-        .then(() => cargarCarritoGuardado((JSON.parse(localStorage.getItem("carrito")) ?? [])))
-    .catch((err)=> {
-        console.error("Se produjo un error durante la carga de datos desde el servidor: ", err)
-        let productos = document.getElementById("productosCarrito")
-        productos.innerHTML = ""
-        let render = document.createElement("h2")
-        render.setAttribute("class", "vacio")
-        render.innerText = "En estos momentos estamos teniendo problemas técnicos en el servidor, vuelva a intentarlo mas tarde."
-        productos.appendChild(render)
-    })
-}
-cargarContenido()
 
 if (localStorage.getItem("Usuario Activo")){
     let usuario = (JSON.parse(localStorage.getItem("Usuario Activo"))).nombre
     let lugarSesion = document.getElementById("barraSuperior")
-
     let sesion = document.createElement("a")
     sesion.setAttribute("href", "./opcionesUsuario.html")
     sesion.setAttribute("id","sesionActual")
@@ -62,7 +41,6 @@ notificarCarritoVacio = (mensaje = "El carrito está vacío") => {
 
 document.getElementById("comprarCarrito").onclick = () => {
     if ((JSON.parse(localStorage.getItem("carrito"))).length) {
-        sessionStorage.setItem("Resumen", JSON.stringify(datosProcesadosSimplificados))
         location.href="./checkOut.html"
     }else{
         notificarCarritoVacio("No se puede comprar un carrito vacío")
@@ -96,14 +74,14 @@ agregarOtraCaja = (id) => {
     let carrito = JSON.parse(localStorage.getItem("carrito"))
     carrito.push(id)
     localStorage.setItem("carrito", JSON.stringify(carrito))
-    cargarCarritoGuardado(carrito)
+    cargarCarritoGuardado()
 }
 
 quitarUnaCaja = (id) => {
     let carrito = JSON.parse(localStorage.getItem("carrito"))
     carrito.splice(carrito.indexOf(id), 1)
     localStorage.setItem("carrito", JSON.stringify(carrito))
-    cargarCarritoGuardado(carrito)
+    cargarCarritoGuardado()
 }
 
 quitarTodasCajas = (id) => {
@@ -112,7 +90,7 @@ quitarTodasCajas = (id) => {
         carrito.splice(carrito.indexOf(id), 1)
     }while (carrito.includes(id))
     localStorage.setItem("carrito", JSON.stringify(carrito))
-    cargarCarritoGuardado(carrito)
+    cargarCarritoGuardado()
 }
 
 activarBotones = () => {
@@ -137,40 +115,17 @@ activarBotones = () => {
     }
 }
 
-class DatosRepetidos {
-    constructor(id, repeticiones){
-        this.id = id
-        this.repeticiones = repeticiones
+async function cargarCarritoGuardado() {
+    try {
+        listadoDeProductos(await recuperarProductosDelCarrito(true))
+    } catch(err) {
+        console.error("Se produjo un error durante la carga de datos desde el servidor: ", err)
+        const mensajeError = document.getElementById("cuerpo")
+        mensajeError.removeAttribute("class")
+        mensajeError.innerHTML = `<h2 class="vacio">Se produjo un error al conectar con el servidor.<br>Vuelva a intentarlo mas tarde.</h2>`
     }
 }
-
-function cargarCarritoGuardado(carrito) {
-    let datosPreProcesados = []
-    let datosProcesados = []
-    let repeticiones = 0
-    let datoActual = 0
-    carrito = carrito.sort((a, b) => a - b)
-    while (carrito.length) {
-        do {
-            repeticiones++
-            datoActual = carrito.shift()
-        }while (datoActual == carrito[0])
-
-        datosPreProcesados.push(new DatosRepetidos(datoActual, repeticiones))
-        repeticiones = 0
-    }
-    datosPreProcesados.forEach(dato => {
-        let datosEnProcesamiento = baseDeDatos.find(i => i.id == dato.id)
-        datosEnProcesamiento.duplicado = dato.repeticiones
-        datosProcesados.push(datosEnProcesamiento)
-    })
-    datosProcesadosSimplificados = datosProcesados.map(dato => ({
-        titulo: dato.titulo,
-        precio: dato.precio,
-        duplicado: dato.duplicado,
-    }))
-    listadoDeProductos(datosProcesados)
-}
+cargarCarritoGuardado()
 
 function listadoDeProductos(datosARenderizar) {
     let cantidadDeProductos = document.getElementById("numeroDeProductos")
@@ -199,6 +154,6 @@ function listadoDeProductos(datosARenderizar) {
     }else{
         precioTotal.innerText = "Total: $0"
         cantidadDeProductos.innerText = "No hay productos"
-        productos.innerHTML = `<h2 class="vacio"> El Carrito está vacío.</h2>`
+        productos.innerHTML = `<h2 class="vacio centrar"> El Carrito está vacío.</h2>`
     }
 }

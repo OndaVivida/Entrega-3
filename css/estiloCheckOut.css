@@ -111,6 +111,22 @@ input {
     color: #fff;
 }
 
+.cargando {
+    text-align: center;
+}
+
+.vacio {
+    display: flex;
+    flex-direction: column;
+	background-color: #19381F;
+	color: #F7B05B;
+    padding: auto;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    font-weight: bold;
+}
+
 .marcaDePagina {
     display: flex;
 	background-color: #19381F;
