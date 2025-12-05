@@ -9,7 +9,6 @@ body {
 	color: #F7B05B;
     justify-content: center;
     align-items: center;
-    width: 100vw;
     height: 20vh;
     margin: 0;
     font-size: 50px;
@@ -88,7 +87,6 @@ a.boton{
 	color: #F7B05B;
     justify-content: center;
     align-items: center;
-    width: 100vw;
     height: 20vh;
     margin: 0;
     font-weight: bold;

@@ -9,7 +9,6 @@ body {
 	color: #F7B05B;
     justify-content: center;
     align-items: center;
-    width: 100vw;
     height: 20vh;
     margin: 0;
     font-size: 50px;
@@ -101,7 +100,6 @@ input {
 }
 
 .botonDeCompra {
-    /* color: #CD4631; */
     background-color: #F7B05B;
     border: 1px solid #000;
 }
@@ -133,7 +131,6 @@ input {
 	color: #F7B05B;
     justify-content: center;
     align-items: center;
-    width: 100vw;
     height: 20vh;
     margin: 0;
     font-weight: bold;

@@ -53,7 +53,7 @@ document.getElementById("formularioIniciarSesion").onsubmit = (desactivarFormula
 //Botón de pre-creado
 document.getElementById("cargarUsuarioDefectoCreado").onclick = () => {
     document.getElementById("correoIngresado").value = "PreCarga@yahoo.com"
-    document.getElementById("contraseñaIngresada").value = "369963"
+    document.getElementById("contraseñaIngresada").value = "1234"
 }
 //Botones de pre-carga
 document.getElementById("cargarUsuarioDefecto1").onclick = () => {
